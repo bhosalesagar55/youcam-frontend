@@ -1,0 +1,30 @@
+<section>
+    <header>
+        <h2>Gallery</h2>
+    </header>
+    <div class="py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-3">
+                    <input #fileUpload type="file" id="upload" (click)="fileUpload.value = null" 
+                        accept="image/*" (change)="upload($event)">
+                    <button (click)="fileUpload.click()" class="btn btn-light border shadow"> 
+                        <i class="fa fa-upload"></i> UPLOAD 
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <span *ngFor="let imageFiles of fileInfos | async">
+                    <div class="col-md-4 mt-2 ml-5">
+                        <div class="shadow border "> 
+                            <img [src]="imageFiles.url" width="300" height="400"
+                                alt="Card image cap">
+                            <h4 class="bg-white mb-0"> {{ imageFiles.name }}</h4>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+

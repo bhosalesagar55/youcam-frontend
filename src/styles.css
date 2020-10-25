@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 100 !important
+}
+
+body {
+    background: #e2e8f0
+}
+
+header {
+    background: #2c5282;
+    text-align: center;
+    padding: 10px;
+    color: #fff
+}
+
+#upload{
+    display:none
+}
